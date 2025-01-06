@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/fdXM7hb/profile-400x400.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/fdXM7hb/profile-400x400.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/fdXM7hb/profile-400x400.jpg">
+    <link rel="mask-icon" href="https://i.ibb.co/fdXM7hb/profile-400x400.jpg" color="#000000">
+    <style>
+        /* Make favicon round */
+        link[rel="icon"],
+        link[rel="apple-touch-icon"] {
+            border-radius: 50%;
+            -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+            mask-image: radial-gradient(circle, white 100%, black 100%);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alva Zikri Aldyza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon dark-icon"></i>
+            <i class="fas fa-sun light-icon"></i>
+        </button>
+        
+        <div class="card-header">
+            <img src="https://i.ibb.co/fdXM7hb/profile-400x400.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Alva Zikri Aldyza</h1>
+            <p class="title">Aceh, Indonesia</p>
+        </div>
+
+        <div class="card-body">
+            <div class="bio">
+                <p>Experienced in Business and Marketing.</p>
+            </div>
+
+            <div class="skills-section">
+                <h2><i class="fas fa-code"></i> Skills</h2>
+                <div class="skills">
+                    <div class="skills-track">
+                        <span>Business and Marketing</span>
+                        <span>Digital Marketing</span>
+                        <span>IT Support</span>
+                        <span>Frontend Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="links-section">
+                <h2><i class="fas fa-link"></i> Links</h2>
+                <div class="links-list">
+                    <a href="https://docs.google.com/document/d/1t1P63GS3CVHPDjQvG4GwqlgVXZXRXgpPhyCu0NUyUY8/edit?usp=sharing" class="link-item" target="_blank">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span>Curriculum Vitae</span>
+                    </a>
+                    <a href="https://pastebin.com/hZwcTD47" class="link-item" target="_blank">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Script</span>
+                    </a>
+                    <a href="links/affiliate.html" class="link-item" target="_blank">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Affiliate Links</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="featured-projects">
+                <h2><i class="fas fa-star"></i> Featured Projects</h2>
+                <div class="project-grid">
+                    <a href="https://alvadyzaa.github.io/listicle/" target="_blank" class="project-card">
+                        <div class="project-info">
+                            <h3>Listicle</h3>
+                            <p>A simple todo list app</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/alvadyzaa/" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/alvadyza/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/alvadyza" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <a href="mailto:alva@morandi.my.id" class="contact-btn" target="_blank">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Contact Me</span>
+            </a>
+
+            <div class="footer">
+                <div class="pageviews">
+                    <i class="far fa-eye"></i>
+                    <span id="pageviews">0</span> views
+                </div>
+                <div class="copyright">
+                    ©2025 
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="scrollToTop()" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="script.js"></script>
+</body>
+</html> 
