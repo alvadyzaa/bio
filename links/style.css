@@ -1,0 +1,358 @@
+:root {
+    /* Default dark theme */
+    --bg-color: #1a1a1a;
+    --card-bg: #242424;
+    --text-color: #ffffff;
+    --text-secondary: #e5e7eb;
+    --border-color: #333333;
+    --link-bg: #2a2a2a;
+    --link-hover: #333333;
+    --header-bg: linear-gradient(135deg, #242424, #1a1a1a);
+}
+
+[data-theme="light"] {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #1f2937;
+    --text-secondary: #4b5563;
+    --border-color: #f1f5f9;
+    --link-bg: #f3f4f6;
+    --link-hover: #e5e7eb;
+    --header-bg: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.card {
+    /* background: var(--card-bg); */
+    background: url('../download.png');
+    background-size:200px 200px;
+    background-position:0 0;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-3px);
+}
+
+.dark-icon {
+    display: none;
+}
+
+[data-theme="dark"] .dark-icon {
+    display: block;
+}
+
+[data-theme="dark"] .light-icon {
+    display: none;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card-header h1 {
+    color: var(--text-color);
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.title {
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+.links-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.link-item {
+    background: var(--link-bg);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-item:hover {
+    transform: translateY(-3px);
+    background: var(--link-hover);
+}
+
+.footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.pageviews {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.copyright a {
+    background: linear-gradient(to right, #00ffbb, #00a3ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.copyright a:hover {
+    text-decoration: none;
+}
+
+.copyright a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #00ffbb, #00a3ff);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.copyright a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media (max-width: 640px) {
+    .card {
+        padding: 1.5rem;
+        margin: 1rem auto;
+        border-radius: 20px;
+    }
+} 
+
+/* Update transition speeds */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease, color 0.2s ease; /* Dipercepat dari 0.3s */
+}
+
+.link-item {
+    /* ... properti lainnya ... */
+    transition: all 0.2s ease; /* Dipercepat dari 0.3s */
+}
+
+.back-button {
+    /* ... properti lainnya ... */
+    transition: transform 0.2s ease; /* Dipercepat dari 0.3s */
+} 
+
+/* Recommendations scroll animation */
+.recommendations {
+    display: flex;
+    gap: 8px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    position: relative;
+    padding: 4px 0;
+}
+
+.recommendations-track {
+    display: flex;
+    gap: 8px;
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 4px));
+    }
+}
+
+/* Hover to pause */
+.recommendations:hover .recommendations-track {
+    animation-play-state: paused;
+}
+
+/* Style untuk recommendation items */
+.recommendations span {
+    background: linear-gradient(var(--link-bg), var(--link-bg)) padding-box,
+                linear-gradient(to right, #30cfd0, #330867) border-box;
+    border: 2px solid transparent;
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.recommendations span:hover {
+    background: linear-gradient(var(--link-hover), var(--link-hover)) padding-box,
+                linear-gradient(to right, #330867, #30cfd0) border-box;
+}
+
+/* Optional: Add gradient fade effect on edges */
+.recommendations::before,
+.recommendations::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.recommendations::before {
+    left: 0;
+    background: linear-gradient(to right, var(--card-bg), transparent);
+}
+
+.recommendations::after {
+    right: 0;
+    background: linear-gradient(to left, var(--card-bg), transparent);
+}
+
+/* Dropdown styles */
+.dropdown {
+    width: 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.dropdown-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--link-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-btn:hover {
+    transform: translateY(-3px);
+    background: var(--link-hover);
+}
+
+.dropdown-content {
+    display: none;
+    padding: 0.5rem 0 0 1rem;
+}
+
+.dropdown-content .link-item {
+    margin-top: 8px;
+    padding: 1rem 1.5rem;
+    background: var(--link-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    color: var(--text-color) !important;
+}
+
+.dropdown-content .link-item span {
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+    color: var(--text-color) !important;
+}
+
+.dropdown-content .link-item:hover {
+    transform: translateY(-3px);
+    background: var(--link-hover);
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.dropdown.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.fa-chevron-down {
+    transition: transform 0.2s ease;
+} 
